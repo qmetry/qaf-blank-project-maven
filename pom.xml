@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.infostretch</groupId>
+	<groupId>com.qmetry</groupId>
 	<artifactId>qaf-blank-project-maven</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -53,12 +53,12 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.infostretch</groupId>
+			<groupId>com.qmetry</groupId>
 			<artifactId>qaf</artifactId>
 			<version>${qaf.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.infostretch</groupId>
+			<groupId>com.qmetry</groupId>
 			<artifactId>qaf-support</artifactId>
 			<version>${qaf.version}</version>
 		</dependency>
@@ -234,7 +234,7 @@
 					<complianceLevel>${sourceVersion}</complianceLevel>
 					<aspectLibraries>
 						<aspectLibrary>
-							<groupId>com.infostretch</groupId>
+							<groupId>com.qmetry</groupId>
 							<artifactId>qaf</artifactId>
 						</aspectLibrary>
 					</aspectLibraries>
