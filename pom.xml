@@ -15,7 +15,7 @@
 		<testSuiteFile>config/testrun_config.xml</testSuiteFile>
 		<sourceVersion>1.7</sourceVersion>
 		<targetVersion>1.7</targetVersion>
-		<qaf.version>2.1.7b</qaf.version>
+		<qaf.version>2.1.8</qaf.version>
 		<aspectj.version>1.8.5</aspectj.version>
 		<testng.version>6.8.8</testng.version>
 		<apache.common.config.version>1.7</apache.common.config.version>
