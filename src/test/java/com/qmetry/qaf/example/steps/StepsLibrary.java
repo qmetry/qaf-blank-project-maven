@@ -1,9 +1,9 @@
 package com.qmetry.qaf.example.steps;
 
-import static com.qmetry.automation.step.CommonStep.click;
-import static com.qmetry.automation.step.CommonStep.sendKeys;
+import static com.qmetry.qaf.automation.step.CommonStep.click;
+import static com.qmetry.qaf.automation.step.CommonStep.sendKeys;
 
-import com.qmetry.automation.step.QAFTestStep;
+import com.qmetry.qaf.automation.step.QAFTestStep;
 
 public class StepsLibrary {
 	/**
