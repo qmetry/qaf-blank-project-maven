@@ -22,7 +22,6 @@ To run the project, from command prompt go to project home and run mvn. Open das
 Note: This sample project uses chrome driver and it requires chrome driver binary.
 You need to download and set webdriver.chrome.driver property in application.properties file with driver binary path.
 
-Please refer https://infostretch.github.io/qaf/properties_list.html
- 
+Please refer https://qmetry.github.io/qaf/ 
 Thanks,
 QAS Team.
