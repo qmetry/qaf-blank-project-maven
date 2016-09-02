@@ -27,7 +27,7 @@
 	<repositories>
 		<repository>
 			<id>qaf</id>
-			<url>https://infostretch.github.io/qaf/dist</url>
+			<url>https://qmetry.github.io/qaf/dist</url>
 		</repository>
 		<repository>
 			<id>jai</id>
