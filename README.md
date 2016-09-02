@@ -1,6 +1,6 @@
 # qaf-blank-project-maven
 
-This is automation project skeleton to start with using MAVEN. Please refer [documentaion](https://infostretch.github.io/qaf/) for more help.
+This is automation project skeleton to start with using MAVEN. Please refer [documentaion](https://qmetry.github.io/qaf/) for more help.
 
 
 This is sample project with Maven directory structure:
