@@ -15,7 +15,7 @@
 		<testSuiteFile>config/testrun_config.xml</testSuiteFile>
 		<sourceVersion>1.7</sourceVersion>
 		<targetVersion>1.7</targetVersion>
-		<qaf.version>2.1.8</qaf.version>
+		<qaf.version>2.1.9</qaf.version>
 		<test.results.dir>test-results</test.results.dir>
 		<run.time>${maven.build.timestamp}</run.time>
 		<lib.dir>${project.basedir}/lib</lib.dir>
