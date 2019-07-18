@@ -13,9 +13,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<testSuiteFile>config/testrun_config.xml</testSuiteFile>
-		<sourceVersion>1.7</sourceVersion>
-		<targetVersion>1.7</targetVersion>
-		<qaf.version>2.1.13</qaf.version>
+		<sourceVersion>1.8</sourceVersion>
+		<targetVersion>1.8</targetVersion>
+		<qaf.version>2.1.14</qaf.version>
+		<selenium.version>3.141.59</selenium.version>
 		<test.results.dir>test-results</test.results.dir>
 		<run.time>${maven.build.timestamp}</run.time>
 		<lib.dir>${project.basedir}/lib</lib.dir>
@@ -37,6 +38,16 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.qmetry</groupId>
 			<artifactId>qaf</artifactId>
 			<version>${qaf.version}</version>
@@ -48,7 +59,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -62,7 +72,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.7</version>
+				<version>1.8</version>
 				<executions>
 					<execution>
 						<id>test-compile</id>

@@ -1,7 +1,8 @@
 package com.qmetry.qaf.example.steps;
 
-import static com.qmetry.qaf.automation.step.CommonStep.click;
 import static com.qmetry.qaf.automation.step.CommonStep.sendKeys;
+
+import org.openqa.selenium.Keys;
 
 import com.qmetry.qaf.automation.step.QAFTestStep;
 
@@ -12,7 +13,6 @@ public class StepsLibrary {
 	 */
 	@QAFTestStep(description = "search for {0}")
 	public static void searchFor(String searchTerm) {
-		sendKeys(searchTerm, "input.search");
-		click("button.search");
+		sendKeys(searchTerm+Keys.ENTER, "input.search");
 	}
 }
