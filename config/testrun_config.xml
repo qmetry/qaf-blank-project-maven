@@ -27,12 +27,7 @@ For any inquiry or need additional information, please contact support-qaf@infos
 <suite name="QAF Demo" verbose="0">
 	<test name="BDD Test" enabled="true">
 		<classes>
-			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
-		</classes>
-	</test>
-	<test name="KWD Test" enabled="false">
-		<classes>
-			<class name="com.qmetry.qaf.automation.step.client.csv.KwdTestFactory"></class>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory2"></class>
 		</classes>
 	</test>
 	<test name="java Test" enabled="true">
