@@ -27,10 +27,6 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>qaf</id>
-			<url>https://qmetry.github.io/qaf/dist</url>
-		</repository>
-		<repository>
 			<id>jai</id>
 			<url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
 		</repository>
