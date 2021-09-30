@@ -28,5 +28,5 @@ jobs:
         sudo apt install google-chrome-stable
         sudo apt-get install firefox
     - name: Build with Maven
-      run: mvn -B test --file pom.xml
+      run: mvn -B test --file pom.xml -Dchrome.additional.capabilities={"goog:chromeOptions":{"args":["headless"]}}
 
