@@ -99,8 +99,8 @@ var testOverviewTemplate = '<tr>'
 var methodHeaderTemplate = '<div class="mehod ${result} ${type}" id="${result}_cont">'
 		+ '<div class="mehodheader" onclick="mehodheaderClick(this);">'
 		+ '<span class="statusicon ${result}"> &nbsp;<span class="status" style="display:none">${result}</span></span>'
-		+ '<b class="ui-icon-text">{{if (typeof metaData != \'undefined\') }} {{each(i,v) metaData}} {{if (i == \'name\')}}${v} {{/if}}{{/each}} {{else}} ${name} {{/if}}</b> {{if ((typeof args != \'undefined\') && args.length>0 && isMap(args[0]))}}'
-		+ ' <span class="mehod-args"> ${args[0][\'tcId\']} ${args[0][\'recId\']}</span> {{/if}}'
+		+ '<b class="ui-icon-text">{{if (typeof metaData != \'undefined\') }} {{each(i,v) metaData}} {{if (i == \'name\')}}${v} {{/if}}{{/each}} {{else}} ${name} {{/if}}</b> '
+		+ '<span class="mehod-args">${getRecordSummary(args)}</span>'
 		+ '<div style="float: right; ">'
 		+ '{{if typeof retryCount != \'undefined\' && retryCount>0}}'
 		+ '<span class=\'rerunCount\' title="Retried Failed Execution">${retryCount}</span>{{/if}}'
@@ -117,7 +117,7 @@ var methodHeaderTemplate = '<div class="mehod ${result} ${type}" id="${result}_c
 		+ '<th>Test Data:</th>'
 		+ '<td colspan="3">${parseArray(args)}</td>'
 		+ '</tr>'
-		+ '{{/if}} {{if (typeof metaData != \'undefined\') }} {{each(i,v) getMetaDataToDisplay(metaData)}} {{if (v!= \'undefined\' && v.length>0)}}'
+		+ '{{/if}} {{if (typeof metaData != \'undefined\') }} {{each(i,v) getMetaDataToDisplay(metaData)}} {{if (v && v!= \'undefined\' && v.length>0)}}'
 		+ '<tr>'
 		+ '<th>${i.capitalizeFirstLetter()}:</th>'
 		+ '<td>'
@@ -934,7 +934,10 @@ function trunck(str) {
 }
 
 function escapHtml(str){
-	return str.replace(/<(?!(a |\/a))/gi,"&lt;");
+	if(str){
+		return str.replace(/<(?!(a |\/a))/gi,"&lt;");
+	}
+	return "";
 }
 
 function formatedRes(res) {
@@ -1713,7 +1716,19 @@ function isMap(o) {
         return false;
     }
 }
-
+function getRecordSummary(args){
+    try {
+        if((typeof args != 'undefined') && args.length>0){
+            const flds = ['recid','summary','tcid','testcaseid'];
+            for(var p in args[0]){
+                if(args[0].hasOwnProperty(p) && flds.includes((p+ "").replace(/[^a-z]/gi, '').toLowerCase())){
+                    return args[0][p];
+                }
+            }
+        }
+    } catch(e) {}
+    return "";
+}
 function msToDateStr(ms) {
 	var date = new Date(ms);
 	return date;
