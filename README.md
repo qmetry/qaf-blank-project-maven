@@ -1,6 +1,6 @@
 # qaf-blank-project-maven
 
-This is automation project skeleton to start with using MAVEN. Please refer to [documentaion](https://qmetry.github.io/qaf/) for more help.
+This is automation project skeleton to start with using MAVEN. Please refer to [documentation](https://qmetry.github.io/qaf/) for more help.
 
 
 ### Intro
