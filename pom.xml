@@ -16,7 +16,7 @@
 		<sourceVersion>1.8</sourceVersion>
 		<targetVersion>1.8</targetVersion>
 		<qaf.version>LATEST</qaf.version>
-		<selenium.version>LATEST</selenium.version>
+		<selenium.version>4.10.0</selenium.version>
 		<webdrivermanager.version>LATEST</webdrivermanager.version>
 		<test.results.dir>test-results</test.results.dir>
 		<run.time>${maven.build.timestamp}</run.time>
