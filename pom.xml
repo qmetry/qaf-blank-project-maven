@@ -16,7 +16,8 @@
 		<sourceVersion>1.8</sourceVersion>
 		<targetVersion>1.8</targetVersion>
 		<qaf.version>LATEST</qaf.version>
-		<selenium.version>3.141.59</selenium.version>
+		<selenium.version>LATEST</selenium.version>
+		<webdrivermanager.version>LATEST</webdrivermanager.version>
 		<test.results.dir>test-results</test.results.dir>
 		<run.time>${maven.build.timestamp}</run.time>
 		<lib.dir>${project.basedir}/lib</lib.dir>
@@ -44,6 +45,11 @@
 			<version>${qaf.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.qmetry</groupId>
 			<artifactId>qaf-support</artifactId>
 			<version>${qaf.version}</version>
@@ -57,6 +63,23 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+					<execution>
+						<id>repo-editor</id>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<mainClass>com.qmetry.qaf.automation.tools.RepoEditor</mainClass>
+					<classpathScope>test</classpathScope>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
