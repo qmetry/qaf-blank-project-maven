@@ -6,8 +6,13 @@ import com.qmetry.qaf.automation.step.QAFTestStep;
 
 import com.qmetry.qaf.automation.ui.webdriver.*;
 
-
 public class StepsLibrary {
+
+	@QAFTestStep(description = "navigate to search page")
+	public static void navigateToSearchPage() {
+		get("/");
+		rejectAllCookies();
+	}
 
 	/**
 	 * @param searchTerm
@@ -21,14 +26,13 @@ public class StepsLibrary {
 
 	/**
 	 * In Europe, a cookies popup appears in google before search is available.
-	 * It has Reject All button. Once it's clicked the search page appears.
+	 * It has Reject All button. Once clicked, cookies are rejected and the search page appears.
 	 * */
-	@QAFTestStep(description = "reject all cookies")
-	public static void rejectAllCookies() {
+	private static void rejectAllCookies() {
 		QAFWebElement rejectAllButton = new QAFExtendedWebElement("reject.all");
 
 		if (rejectAllButton.isPresent()) {
-			click("reject.all");
+			rejectAllButton.click();
 		}
 	}
 }
