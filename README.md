@@ -24,7 +24,7 @@ To change dependencies check `pom.xml`.
 
 To run the project, from command prompt go to project home and run:
 
-    mvn test 
+    mvn clean test 
 
 Open `dashboard.htm` to view results.
 

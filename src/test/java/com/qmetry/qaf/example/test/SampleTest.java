@@ -1,7 +1,7 @@
 package com.qmetry.qaf.example.test;
 
-import static com.qmetry.qaf.automation.step.CommonStep.get;
 import static com.qmetry.qaf.automation.step.CommonStep.verifyLinkWithPartialTextPresent;
+import static com.qmetry.qaf.example.steps.StepsLibrary.navigateToSearchPage;
 import static com.qmetry.qaf.example.steps.StepsLibrary.searchFor;
 import org.testng.annotations.Test;
 
@@ -11,7 +11,7 @@ public class SampleTest extends WebDriverTestCase {
 
 	@Test
 	public void testGoogleSearch() {
-		get("/");
+		navigateToSearchPage();
 		searchFor("qaf github infostretch");
 		verifyLinkWithPartialTextPresent("qaf");
 	}
